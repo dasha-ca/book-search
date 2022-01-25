@@ -40,6 +40,8 @@ class BooksDataService {
 
     public async getBooksByIsbn(bookIsbn: string) {
         bookIsbn = encodeURIComponent(bookIsbn);
+        // TODO: this endpoint service throws a CORS error. So I could not use it. 
+        // Since I don't own their server and I don't want to waste time setting up a proxy - I gave up
         const result = await fetch(`https://openlibrary.org/api/volumes/brief/isbn/${bookIsbn}.json`);
         const searchResult = await result.json() as SearchResultsIsbn;
         return searchResult.items;
