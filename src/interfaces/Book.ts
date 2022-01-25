@@ -1,5 +1,5 @@
 export interface Book {
-    key: string;
+    // key: string;
     type: string;
     title: string;
     title_suggest: string;

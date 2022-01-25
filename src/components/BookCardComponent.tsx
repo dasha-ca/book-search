@@ -23,7 +23,7 @@ const BookCardComponent: React.FC<Book> = (props) => {
     const classes = useStyles();
 
     return (
-        <Card className={classes.root}>
+        <Card className={classes.root} key={props.isbn}>
             <CardContent>
                 <h3>{props.title}</h3><br />
 
@@ -31,7 +31,7 @@ const BookCardComponent: React.FC<Book> = (props) => {
                     <div style={{ flexGrow: "1" }}>
                         <p>By <strong>{props.author_name && <span>{props.author_name}</span>}</strong></p>
                         <p>Published {props.publish_year}</p>
-                        <p>{props.number_of_pages > 0 &&  props.number_of_pages } pages</p>
+                        <p>{props.number_of_pages > 0 && props.number_of_pages} pages</p>
                     </div>
                     <div style={{ flexGrow: "1" }}>
                         {props.isbn && props.isbn.length > 0 && <img

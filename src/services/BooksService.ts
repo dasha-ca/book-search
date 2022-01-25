@@ -16,7 +16,7 @@ class BooksDataService {
                 edition_key: document.edition_key && document.edition_key[0],
                 first_sentence: document.first_sentence && document.first_sentence[0],
                 isbn: document.isbn && document.isbn[0],
-                key: document.key && document.key[0],
+                // key: document.key && document.key[0],
                 language: document.language && document.language[0],
                 lccn: document.lccn && document.lccn[0],
                 number_of_pages: document.number_of_pages_median,

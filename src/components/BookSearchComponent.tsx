@@ -26,7 +26,7 @@ const BookSearchComponent: React.FC = () => {
 
     const changeHandler = async (event: any) => {
         setInProgress(true);
-        const books = await BooksService.getBooksByIsbn(event.target.value);
+        const books = await BooksService.getBooksByTitle(event.target.value);
         setBooks(books);
         setInProgress(false);
     };
@@ -62,15 +62,18 @@ const BookSearchComponent: React.FC = () => {
                     }}>
                         {orderBy(books, [searchState.sortFieldName], [
                             searchState.sortAscending ? 'asc' : 'desc'])
-                            .map(book => <BookCardComponent {...book} />)}
+                            .map(book =>
+                                <BookCardComponent key={book.isbn + book.title} {...book} />
+                            )}
+
                     </Box>
                 </div>
 
                 <div style={{ margin: "20px" }}>
                     <div style={{ width: "300px" }}>
                         <Switch
-                            // checked={searchState.sortAscending}
-                            onChange={(a, checked) => setSearchState({ ...searchState, 
+                            onChange={(a, checked) => setSearchState({
+                                ...searchState,
                                 sortAscending: checked,
                                 sortFieldName: "title"
                             })}
@@ -80,13 +83,12 @@ const BookSearchComponent: React.FC = () => {
                         <label>Sort by title (Ascending)</label>
                     </div>
 
-                    <div style={{ width: "300px" }}>
+                    <div >
                         <Switch
-                            // checked={searchState.sortAscending}
                             onChange={(a, checked) => setSearchState({
                                 ...searchState,
                                 sortAscending: checked,
-                                sortFieldName:"publish_year"
+                                sortFieldName: "publish_year"
                             })}
                             name="checkedB"
                             inputProps={{ 'aria-label': 'sort by date' }}
