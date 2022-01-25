@@ -1,4 +1,3 @@
-import Box from "@material-ui/core/Box";
 import { Book } from "../interfaces/Book";
 import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core/styles';
@@ -11,8 +10,13 @@ const useStyles = makeStyles({
         minWidth: 400,
         maxWidth: 800,
         margin: 10,
-        backgroundColor: '#deeaee',
-    }
+        backgroundColor: '#DEEBA9',
+    },
+    flexRoot: {
+        display: "flex",
+        flexWrap: "nowrap"
+    },
+
 });
 
 const BookCardComponent: React.FC<Book> = (props) => {
@@ -21,20 +25,23 @@ const BookCardComponent: React.FC<Book> = (props) => {
     return (
         <Card className={classes.root}>
             <CardContent>
-                <span>{props.title}</span><br />
-                <span>{props.first_publish_year}</span><br />
-                <span>{props.number_of_pages_median}</span><br />
-                {props.author_name && props.author_name.length > 0 && <span>{props.author_name[0]}</span>}<br />
+                <h3>{props.title}</h3><br />
 
-                {props.isbn && props.isbn.length > 0 && <img
-                    src={`https://covers.openlibrary.org/b/isbn/${props.isbn[0]}-S.jpg`}
-                    alt={props.title}
-                />}
-                {/* <pre>{JSON.stringify(props, null, 3)}</pre> */}
+                <div style={{ display: "flex" }}>
+                    <div style={{ flexGrow: "1" }}>
+                        <p>By <strong>{props.author_name && <span>{props.author_name}</span>}</strong></p>
+                        <p>Published {props.publish_year}</p>
+                        <p>{props.number_of_pages > 0 &&  props.number_of_pages } pages</p>
+                    </div>
+                    <div style={{ flexGrow: "1" }}>
+                        {props.isbn && props.isbn.length > 0 && <img
+                            src={`https://covers.openlibrary.org/b/isbn/${props.isbn}-M.jpg`}
+                            alt={props.title}
+                        />}
+                    </div>
+                </div>
+
             </CardContent>
-            <CardActions>
-                <Button size="small">Vew More</Button>
-            </CardActions>
         </Card>
     );
 }

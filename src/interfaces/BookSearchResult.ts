@@ -1,10 +1,10 @@
-import { Book } from "./Book";
+import { Document } from "./Document";
 
 export interface BookSearchResult {
     numFound: number;
     start: number;
     numFoundExact: boolean;
-    docs: Book[];
+    docs: Document[];
     num_found: number;
     q: string;
     offset?: any;
