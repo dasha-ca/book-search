@@ -1,0 +1,82 @@
+{
+    "records": {
+        "/books/OL28570160M": {
+            "isbns": ["9781442249073"],
+            "issns": [],
+            "lccns": [],
+            "oclcs": [],
+            "olids": ["OL28570160M"],
+            "publishDates": ["2015"],
+            "recordURL": "https://openlibrary.org/books/OL28570160M/Gatsby",
+            "data": {
+                "url": "https://openlibrary.org/books/OL28570160M/Gatsby",
+                "key": "/books/OL28570160M",
+                "title": "Gatsby",
+                "subtitle": "The Cultural History of the Great American Novel",
+                "authors": [{
+                    "url": "https://openlibrary.org/authors/OL1604310A/Bob_Batchelor",
+                    "name": "Bob Batchelor"
+                }],
+                "number_of_pages": 318,
+                "identifiers": {
+                    "isbn_13": ["9781442249073"],
+                    "openlibrary": ["OL28570160M"]
+                },
+                "classifications": {
+                    "lc_classifications": [""]
+                },
+                "publishers": [{
+                    "name": "Rowman & Littlefield Publishers, Incorporated"
+                }],
+                "publish_date": "2015",
+                "subjects": [{
+                    "name": "Fitzgerald, f. scott (francis scott), 1896-1940",
+                    "url": "https://openlibrary.org/subjects/fitzgerald,_f._scott_(francis_scott),_1896-1940"
+                }]
+            },
+            "details": {
+                "bib_key": "isbn:9781442249073",
+                "info_url": "https://openlibrary.org/books/OL28570160M/Gatsby",
+                "preview": "noview",
+                "preview_url": "https://openlibrary.org/books/OL28570160M/Gatsby",
+                "details": {
+                    "publishers": ["Rowman & Littlefield Publishers, Incorporated"],
+                    "subtitle": "The Cultural History of the Great American Novel",
+                    "last_modified": {
+                        "type": "/type/datetime",
+                        "value": "2020-08-04T17:28:21.913122"
+                    },
+                    "source_records": ["bwb:9781442249073"],
+                    "title": "Gatsby",
+                    "number_of_pages": 318,
+                    "isbn_13": ["9781442249073"],
+                    "created": {
+                        "type": "/type/datetime",
+                        "value": "2020-08-04T17:28:21.913122"
+                    },
+                    "languages": [{
+                        "key": "/languages/eng"
+                    }],
+                    "full_title": "Gatsby The Cultural History of the Great American Novel",
+                    "lc_classifications": [""],
+                    "publish_date": "2015",
+                    "key": "/books/OL28570160M",
+                    "authors": [{
+                        "key": "/authors/OL1604310A",
+                        "name": "Bob Batchelor"
+                    }],
+                    "latest_revision": 1,
+                    "works": [{
+                        "key": "/works/OL16810672W"
+                    }],
+                    "type": {
+                        "key": "/type/edition"
+                    },
+                    "subjects": ["Fitzgerald, f. scott (francis scott), 1896-1940"],
+                    "revision": 1
+                }
+            }
+        }
+    },
+    "items": []
+}
