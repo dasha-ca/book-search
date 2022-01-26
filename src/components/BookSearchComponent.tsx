@@ -40,8 +40,9 @@ const BookSearchComponent: React.FC = () => {
             {inProgress && <LinearProgress />}
             <Box sx={{
                 display: 'flex',
+                margin: 50,
                 justifyContent: 'space-evenly',
-                borderRadius: 1
+                borderRadius: 5
             }}  >
                 <TextField
                     id="search-box"
