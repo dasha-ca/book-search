@@ -25,7 +25,7 @@ const BookCardComponent: React.FC<Book> = (props) => {
     return (
         <Card className={classes.root} key={props.isbn}>
             <CardContent>
-                <h3>{props.title}</h3><br />
+                {<h3><a href={`https://www.amazon.com/s?k=${props.isbn}`} target="_blank" rel="norefferer">{props.title}</a></h3>}<br />
 
                 <div style={{ display: "flex" }}>
                     <div style={{ flexGrow: "1" }}>
